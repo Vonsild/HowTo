@@ -1,6 +1,9 @@
 # HowTo
 A collection of solutions to various tasks, that I keep forgetting how to solve
 
+## Markdown
+[Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+
 ## Bash
 Counting the number of lines in a file:
 
