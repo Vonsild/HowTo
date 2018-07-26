@@ -27,7 +27,7 @@ sort -k 3 FILENAME
 
 Count unique errors in error.log (start by cutting out the \[something\] groups at the start of the line)
 ```bash
-sed -E 's/^(\[[^]]+\] )+//' -- error.log | sort | uniq -cw 100 | wc -l
+sed -E 's/^(\[[^]]+\] )+//' -- FILENAME | sort | uniq -cw 100 | wc -l
 ```
 
 [Echo](https://linux.die.net/man/1/echo) using color [List of formats](https://misc.flogisoft.com/bash/tip_colors_and_formatting):
