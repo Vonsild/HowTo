@@ -10,6 +10,21 @@ Counting the number of lines in a file:
 wc -l < FILENAME
 ```
 
+Counting unique lines
+```bash
+uniq -c FILENAME
+```
+
+Sorting lines in a file
+```bash
+sort FILENAME
+```
+
+Sorting by 3rd column
+```bash
+sort -k 3 FILENAME
+```
+
 [Echo](https://linux.die.net/man/1/echo) using color [List of formats](https://misc.flogisoft.com/bash/tip_colors_and_formatting):
 ```bash
 # The -e argument to echo enables interpretation of backslash escapes
