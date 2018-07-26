@@ -14,3 +14,7 @@ Counting the number of lines in a file:
     # The -e argument to echo enables interpretation of backslash escapes
     # \e[FORMATm turns on a given format. The code 0 (zero) clears all formatting
     echo -e "The following is \[e[31mred\e[0m, and this is back to default"
+
+Count requests in Apache access log, grouped by IP version (IPv4 vs IPv6)
+
+    cat access.log | cut -d' ' -f1 | sed 's/.*\..*/IPv4/' | sed 's/.*:.*/IPv6/' | sort | uniq -c
