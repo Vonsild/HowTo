@@ -17,6 +17,7 @@ wc -l < FILENAME
 echo -e "The following is \[e[31mred\e[0m, and this is back to default"
 ```
 
+## Apache
 Count requests in Apache access log, grouped by IP version (IPv4 vs IPv6)
 ```bash
 cat access.log | cut -d' ' -f1 | sed 's/.*\..*/IPv4/' | sed 's/.*:.*/IPv6/' | sort | uniq -c
