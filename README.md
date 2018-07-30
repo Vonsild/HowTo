@@ -30,6 +30,8 @@ Count unique errors in error.log (start by cutting out the \[something\] groups 
 sed -E 's/^(\[[^]]+\] )+//' -- FILENAME | sort | uniq -cw 100 | wc -l
 ```
 
+### Echo
+
 [Echo](https://linux.die.net/man/1/echo) using color [List of formats](https://misc.flogisoft.com/bash/tip_colors_and_formatting):
 ```bash
 # The -e argument to echo enables interpretation of backslash escapes
