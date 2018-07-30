@@ -37,6 +37,11 @@ sed -E 's/^(\[[^]]+\] )+//' -- FILENAME | sort | uniq -cw 100 | wc -l
 echo -e "The following is \[e[31mred\e[0m, and this is back to default"
 ```
 
+Echo without trailing newline:
+```bash
+echo -n "This is line one."; echo " This is also line one."; echo "This is line two."
+```
+
 ## Apache
 Count requests in Apache access log, grouped by IP version (IPv4 vs IPv6)
 ```bash
