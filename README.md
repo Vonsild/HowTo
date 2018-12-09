@@ -55,3 +55,5 @@ zless access.log access.log.* | cut -d' ' -f1 | sed 's/.*\..*/IPv4/' | sed 's/.*
 52750 IPv4
  7005 IPv6
 ```
+### Slooow SSL
+When it takes a loooong time to establish SSL-connections, go to `/etc/apache2/mods-enabled/mpm_prefork.conf` (or whatever mpm version in use) and increase `MaxRequestWorkers`. If a number higher than 256 is needed, set `ServerLimit` to the same value as `MaxRequestWorkers`, or the limit will be lowered to 256!
