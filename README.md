@@ -57,3 +57,11 @@ zless access.log access.log.* | cut -d' ' -f1 | sed 's/.*\..*/IPv4/' | sed 's/.*
 ```
 ### Slooow SSL
 When it takes a loooong time to establish SSL-connections, go to `/etc/apache2/mods-enabled/mpm_prefork.conf` (or whatever mpm version in use) and increase `MaxRequestWorkers`. If a number higher than 256 is needed, set `ServerLimit` to the same value as `MaxRequestWorkers`, or the limit will be lowered to 256!
+
+## Apt-get and related
+Apt-get reads the `/etc/apt/sources.list` - remember to run `sudo apt-get update` after updating this file.
+
+To install .deb file from disk: `apt install ./<FILENAME>`
+
+To view the description of the .deb file: `dpkg-deb -I ./<FILENAME>`
+
