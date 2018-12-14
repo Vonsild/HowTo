@@ -63,5 +63,5 @@ Apt-get reads the `/etc/apt/sources.list` - remember to run `sudo apt-get update
 
 To install .deb file from disk: `apt install ./<FILENAME>`
 
-To view the description of the .deb file: `dpkg-deb -I ./<FILENAME>`
-
+To view the description of the .deb file: `dpkg-deb -I ./<FILENAME>`  
+To view ONLY the 'Description' field: `dpkg -f general-setup.deb Description`
