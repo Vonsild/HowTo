@@ -65,3 +65,7 @@ To install .deb file from disk: `apt install ./<FILENAME>`
 
 To view the description of the .deb file: `dpkg-deb -I ./<FILENAME>`  
 To view ONLY the 'Description' field: `dpkg -f general-setup.deb Description`
+
+## Passwords
+To do default Debian hashing of passwords, to be used in e.g. the `useradd` command:  
+`openssl passwd -crypt` - hit enter, and type the password - out pops a hash, that can be used like `useradd <username> --create-home --password "<hash>" --shell /bin/bash --user-group`
