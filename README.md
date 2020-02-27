@@ -30,6 +30,26 @@ Count unique errors in error.log (start by cutting out the \[something\] groups 
 sed -E 's/^(\[[^]]+\] )+//' -- FILENAME | sort | uniq -cw 100 | wc -l
 ```
 
+Fast listing of files in a large directory (fast because it doesn't sort the output)
+```bash
+ls -f
+```
+
+List only files in a directory (-d appends / to directories, `grep -v /` matches only lines without slashes)
+```bash
+ls -d | grep -v /
+```
+
+List only directories in a directory (-d appends / to directories, `grep /` matches only lines without slashes)
+```bash
+ls -d | grep /
+```
+
+Move files like aacd35fe02... into aa/aacd35fe02... subdirectories. Helpful when a small adhoc project grows too much, and you end up with a million images in a single directory. This version only works for files with hexvalues for names.
+```bash
+ls -fp | grep -v / | grep -E '^[0-9a-f][0-9a-f]' | sed 's/^\(\(..\)..*\)$/mv \1 \2\/\1/' | bash
+```
+
 ### Echo
 
 [Echo](https://linux.die.net/man/1/echo) using color [List of formats](https://misc.flogisoft.com/bash/tip_colors_and_formatting):
